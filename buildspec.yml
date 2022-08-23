@@ -23,7 +23,7 @@ phases:
       - echo $(docker images)
       - docker push 860061945305.dkr.ecr.us-east-1.amazonaws.com/pension-detail-050:detailservice-container
       - echo Writing definition files
-      - printf '[{"name":"authservice-container","imageUri":"%s"}]' 860061945305.dkr.ecr.us-east-1.amazonaws.com/pension-detail-050:detailservice-container > taskdefinition.json
+      - printf '[{"name":"detailservice-container","imageUri":"%s"}]' 860061945305.dkr.ecr.us-east-1.amazonaws.com/pension-detail-050:detailservice-container > taskdefinition.json
 
 artifacts:
   files: taskdefinition.json
