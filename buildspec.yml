@@ -20,7 +20,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:latestdetailservice .
-      - docker tag $REPOSITORY_URI:latestauthservice $REPOSITORY_URI:$IMAGE_TAG
+      - docker tag $REPOSITORY_URI:latestdetailservice $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
       - echo Build completed on `date`
